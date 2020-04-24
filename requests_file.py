@@ -11,7 +11,7 @@ from six import BytesIO
 
 class FileAdapter(BaseAdapter):
     def __init__(self, set_content_length=True):
-        super().__init__()
+        super(BaseAdapter, self).__init__()
         self._set_content_length = set_content_length
 
     def send(self, request, **kwargs):
